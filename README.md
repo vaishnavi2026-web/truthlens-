@@ -1,16 +1,44 @@
-# React + Vite
+# TruthLens
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Misinformation Triage Platform built for Code2Career Track 2.
 
-Currently, two official plugins are available:
+## Hackathon ID
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AZIS-F7T6GH
 
-## React Compiler
+## Track
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Track 2 - Real-World AI Products
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Submit a Claim
+- Automatic Risk Flags
+- Review Workflow
+- Public Feed
+- Claim Detail View
+
+## Risk Rules
+
+- "breaking", "shocking", "share before deleted" = Sensational
+- More than 50% capital letters = Shouting
+- No source link = Unsourced
+- 2 or more flags = High Risk
+
+## Decision Points
+
+See DECISIONS.md.
+
+## Tech Stack
+
+React, Vite, CSS, LocalStorage
+
+## Standard API
+
+Not implemented. The product is designed to be evaluated through the public browser UI.
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
