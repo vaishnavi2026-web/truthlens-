@@ -1,0 +1,658 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 76px;
+  background: white;
+  border-bottom: 1px solid #e7eaf0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  background: #172033;
+  color: white;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.logo span {
+  color: #7a8294;
+  font-size: 11px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.navButtons button {
+  border: none;
+  background: transparent;
+  color: #667085;
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.navButtons button:hover,
+.navButtons .navActive {
+  background: #eef1f6;
+  color: #172033;
+}
+
+.container {
+  width: min(1150px, 90%);
+  margin: auto;
+}
+
+.hero {
+  min-height: 460px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 70px;
+  padding: 70px 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #667085;
+  margin: 0 0 12px;
+}
+
+.hero h2 {
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 0.98;
+  margin: 0 0 24px;
+  letter-spacing: -3px;
+}
+
+.heroText {
+  max-width: 570px;
+  color: #687184;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.primaryButton {
+  border: none;
+  background: #172033;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #17203320;
+}
+
+.heroCard {
+  background: white;
+  border: 1px solid #e3e7ee;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px #17203310;
+}
+
+.shield {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: #eef1f6;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.heroCard h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.heroCard p {
+  color: #70798b;
+  line-height: 1.7;
+}
+
+.feedSection {
+  padding-bottom: 80px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.resetButton {
+  border: 1px solid #d9dee7;
+  background: white;
+  padding: 9px 14px;
+  border-radius: 8px;
+  color: #667085;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filters select,
+.claimForm select,
+.claimForm input,
+.claimForm textarea,
+.reviewCard select,
+.reviewCard textarea {
+  width: 100%;
+  border: 1px solid #d9dee7;
+  background: white;
+  border-radius: 9px;
+  padding: 12px 13px;
+  outline: none;
+}
+
+.filters select {
+  width: auto;
+  min-width: 170px;
+}
+
+.filters select:focus,
+input:focus,
+textarea:focus {
+  border-color: #172033;
+}
+
+.orderInfo {
+  margin-left: auto;
+  color: #7b8495;
+  font-size: 13px;
+}
+
+.claims {
+  display: grid;
+  gap: 15px;
+}
+
+.claimCard {
+  background: white;
+  border: 1px solid #e2e6ed;
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.2s;
+}
+
+.claimCard:hover {
+  border-color: #bdc5d2;
+  transform: translateY(-2px);
+}
+
+.claimTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.badges {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.categoryBadge,
+.riskBadge,
+.statusBadge,
+.largeStatus {
+  padding: 6px 9px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.categoryBadge {
+  background: #eef1f6;
+  color: #4d5668;
+}
+
+.high-risk {
+  background: #ffe7e7;
+  color: #b42318;
+}
+
+.medium-risk {
+  background: #fff1d7;
+  color: #a15c00;
+}
+
+.low-risk {
+  background: #e5f6ec;
+  color: #167043;
+}
+
+.unverified {
+  background: #edf0f4;
+  color: #5e687a;
+}
+
+.verified-true {
+  background: #e5f6ec;
+  color: #167043;
+}
+
+.false {
+  background: #ffe7e7;
+  color: #b42318;
+}
+
+.misleading {
+  background: #fff1d7;
+  color: #a15c00;
+}
+
+.time {
+  color: #8a93a3;
+  font-size: 12px;
+}
+
+.claimCard h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 20px 0;
+  max-width: 850px;
+}
+
+.claimMeta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #70798b;
+  font-size: 13px;
+}
+
+.viewButton {
+  border: none;
+  background: transparent;
+  color: #172033;
+  font-weight: 800;
+  padding: 15px 0 0;
+}
+
+.empty {
+  background: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 16px;
+  color: #7b8495;
+}
+
+.formPage,
+.detailPage {
+  padding: 50px 0 90px;
+}
+
+.backButton {
+  border: none;
+  background: transparent;
+  color: #667085;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.formHeader h2,
+.detailHeader h2 {
+  font-size: 42px;
+  margin: 0 0 10px;
+}
+
+.formHeader p:not(.eyebrow) {
+  color: #717a8b;
+}
+
+.claimForm {
+  background: white;
+  border: 1px solid #e1e5ec;
+  border-radius: 18px;
+  padding: 35px;
+  margin-top: 30px;
+  max-width: 800px;
+}
+
+.claimForm label,
+.reviewCard label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.claimForm textarea,
+.reviewCard textarea {
+  display: block;
+  margin-top: 9px;
+  resize: vertical;
+}
+
+.claimForm input,
+.claimForm select,
+.reviewCard select {
+  display: block;
+  margin-top: 9px;
+}
+
+.claimForm small {
+  display: block;
+  margin-top: 7px;
+  color: #8a93a3;
+  font-weight: 400;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.infoBox {
+  background: #f1f3f7;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.infoBox p {
+  color: #70798b;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.largeStatus {
+  font-size: 13px;
+  padding: 10px 15px;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 20px;
+}
+
+.detailCard,
+.reviewCard {
+  background: white;
+  border: 1px solid #e1e5ec;
+  border-radius: 17px;
+  padding: 27px;
+  margin-bottom: 20px;
+}
+
+.detailCard h3,
+.reviewCard h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.detailLabels {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.detailLabels span {
+  background: #f0f2f5;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  color: #626b7c;
+}
+
+.fullClaim {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #30394a;
+}
+
+.source {
+  font-size: 13px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+  word-break: break-all;
+}
+
+.source a {
+  color: #475467;
+}
+
+.riskSummary {
+  display: flex;
+  justify-content: space-between;
+  background: #f5f6f8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.riskSummary span {
+  color: #7b8495;
+}
+
+.flagList {
+  display: grid;
+  gap: 10px;
+}
+
+.flag {
+  display: flex;
+  gap: 12px;
+  background: #fafafa;
+  border: 1px solid #eceef2;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.flag > span {
+  font-size: 18px;
+}
+
+.flag p {
+  margin: 5px 0 0;
+  color: #747d8d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.noFlags {
+  background: #eaf7ef;
+  color: #167043;
+  padding: 14px;
+  border-radius: 9px;
+}
+
+.reviewCard {
+  position: sticky;
+  top: 100px;
+}
+
+.reviewCard textarea {
+  margin-top: 9px;
+  resize: vertical;
+}
+
+.reviewCard .primaryButton {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.decisionBox {
+  background: #f1f3f6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.decisionBox p {
+  color: #737c8d;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+footer {
+  border-top: 1px solid #e1e5ec;
+  background: white;
+  padding: 25px 6%;
+  display: flex;
+  justify-content: space-between;
+  color: #7b8495;
+  font-size: 12px;
+}
+
+footer div {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .navButtons button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 45px 0;
+  }
+
+  .hero h2 {
+    font-size: 48px;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviewCard {
+    position: static;
+  }
+
+  .twoColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .orderInfo {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .claimTop {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo span {
+    display: none;
+  }
+
+  .navbar {
+    height: 68px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .claimForm,
+  .detailCard,
+  .reviewCard,
+  .heroCard {
+    padding: 20px;
+  }
+}
